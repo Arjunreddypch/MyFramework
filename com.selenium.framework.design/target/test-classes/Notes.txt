@@ -1,0 +1,60 @@
+//identify elements using css selector 
+by using id     "#idattributevalue"
+by using class ".classattribute value"
+// using any attribute driver.findElement(By.cssSelector(“<tagname>[href=’<href value>’]”));
+//Combining Attributes driver.findElement(By.cssSelector(“<tagname>#<id value>[href=’<href value>’]”));
+//Class and attribute Example: driver.findElement(By.cssSelector(“<tagname>.<class value>[href=’<href value>’]”));
+// substring driver.findElement(By.cssSelector(“<tagname>[<attribute>^=’prefix of the string’]”)); "a[class^='Navbar_logo_']"
+//Matching a suffix (Ends with: $):driver.findElement(By.cssSelector(“<tagname>[<attribute>$=’suffix of the string’]”));"a[class$='26S5Y']"
+//contains driver.findElement(By.cssSelector(“<tagname>[<attribute>*=’substring’]”));"a[class*='logo_']"
+TagName with “:first-of-type”
+TagName with “:last-of-type”
+TagName with “:nth-of-type(n)”
+TagName with “:nth-child(n)”
+TagName with “:first-child”
+TagName with “:last-child”
+
+//maven commands through cmd prompt
+-P is profile -D is parameter
+
+mvn clean
+mvn clean install
+mvn test // to run mvn test
+mvn test -P regression  // to run specific profile in testng
+>mvn test -P regression -D browser=chromeheadless
+//system.getProperty usually read the browser giving from cmd prompt or else it will capture from properties file find below example using ternary operator
+String browser = System.getProperty("browser")!=null?System.getProperty("browser"):properties.getProperty("browser");
+
+// jenkins
+to start jenkins 
+
+java -jar jenkinsfilename.extenstion -httpPort=8080 or what ever you want 
+
+select new build, select this project requires parameter, select choice parameters ,add name and values name: browser values:chrome,firefox,chromeheadless 
+
+add maven commands in build parameter ex: mav test -P($profileName) -Dbrowser={$browser}
+
+git commands
+
+git init- initilization
+git config --global user.name Arjun
+git config --blobal user.email "arjunreddypc@gmil.com" // while commiting config details will capture automatically
+git add * /first add files to stage * represents all files 
+git add filename / if you want add specific file
+git commit -m "message" / once stage is done then only we can commit code -m represnts message
+git remote add origin repogiturl / to connect repository to local branch
+git push origin master // push code to repository url
+git checkout -b branchname // to create branch -b is must
+git checkout -b develop// example of create branch
+git checkout develop// to switch to develop branch
+git checkout master// to switch to master branch
+git clone repository url // to clone repo from git
+git branch // list all branches
+git branch -d branchname // to delete branch
+git push -all origin
+git merge develop // merges develop branch to active directory suppose if you are in mster branch and git merge develop all code mill be merged in master
+git diff //give list of conflicts
+git fetch origin// undo local changes
+
+
+
