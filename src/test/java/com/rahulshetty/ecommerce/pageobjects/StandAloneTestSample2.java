@@ -16,7 +16,7 @@ public class StandAloneTestSample2 extends BaseTest {
 		
 		
 		login.goTo();
-		PrdocutCatalog productcatalogpage = login.loginToApplication("","");
+		PrdocutCatalog productcatalogpage = login.loginToApplication(map.get("email"),map.get("password"));
 		productcatalogpage.addItemToCart(map);
 	}
 }
